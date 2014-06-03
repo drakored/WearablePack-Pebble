@@ -1,0 +1,23 @@
+{
+    "uuid": "4fea3427-badb-4129-87ea-8e8d121b93c2",
+    "versionCode": 1,
+    "watchapp": {
+        "watchface": false
+    },
+    "companyName": "dannyh@hotmail.com",
+    "shortName": "Salesforce1",
+    "appKeys": {
+        "KEY_DASHBOARD": 3,
+        "KEY_MSG_VALUE": 2,
+        "KEY_MSG_NAME": 1,
+        "KEY_MSG_TYPE": 0
+    },
+    "versionLabel": "1.1",
+    "resources": {
+        "media": []
+    },
+    "capabilities": [
+        "configurable"
+    ],
+    "longName": "Salesforce1 for Pebble"
+}
