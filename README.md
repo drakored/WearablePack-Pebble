@@ -6,7 +6,7 @@ Wear Pack for Pebble
 Overview
 --------
 
-The Wear Pack for Pebble includes the *Pebble Dashboard app*, which displays key summary metrics from up to three Salesforce Dashboards or Reports. The app is written in JavaScript using the PebbleKit JavaScript Framework and uses the Force.com Analytics API to query report data from Salesforce and display it on the watch.
+The Wear Pack for Pebble includes the *Pebble Dashboard* sample app, which displays key summary metrics from up to three Salesforce Reports on the watch. The app is written in JavaScript using the PebbleKit JavaScript Framework and uses the Force.com Analytics API to query report data from Salesforce and display it on the watch.
 
 
 
@@ -20,6 +20,10 @@ report line items, the application will use the Analytics API to make a REST
 call to request the udpated numbers from Salesforce and display the totals from
 the Salesforce Report.
 
+
 This sample application is part of the <a href="http://developer.salesforce.com/wear" target="_blank">Salesforce Wear Developer Pack</a>, a collection of open-source starter apps that let you quickly design and build wearable apps that connect to the Salesforce1 Platform. 
 
 
+Getting Started
+--------
+Please refer to the <a href="http://developer.salesforce.com/wear" target="_blank">getting started guide</a> for details on how to run and test the app and about the underlying app architecture and code.
