@@ -1,4 +1,4 @@
-WearablePack-Pebble
+Wear Pack for Pebble
 ===================
 
 
