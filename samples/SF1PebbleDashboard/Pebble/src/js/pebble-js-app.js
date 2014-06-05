@@ -55,11 +55,18 @@ var restRequest = function(restRqst, respAction, restOutput) {
                 // There should only exactly one report return [0], otherwise there is an issue
                 if (JSONresponse.totalSize == 1) {
                   //Store the data but make sure it will fit on the Pebble sceen
+                  try {
                   var tempName = JSONresponse.records[0].Description;
                   reportName[restOutput] = tempName.substring(0,30);
                   var reportID = JSONresponse.records[0].Id;
                   var urd = "analytics/reports/"+reportID+"?includeDetails=false";
+                  console.log(">>>>>>>>>>>>>>>>>>>>>>>Search Report Data<<<<<<<<<<<<<<<<<<<<<<<")
                   restRequest(urd, "ReportData", restOutput);
+                  }
+                  catch(err) {
+                    reportName[restOutput] = "Invalid Total or Desc.";
+                    reportValue[restOutput] = "Report Error";
+                  }
                 } else {
                   reportName[restOutput] = "Report Missing";
                   reportValue[restOutput] = "Unknown";
@@ -85,7 +92,7 @@ var restRequest = function(restRqst, respAction, restOutput) {
     //----------------------------------------------------------------------------------------- REST Response Handler    
   
   csf.send(null);  //Sends the request to Salesforce.
-  console.log("__________________________REST Reqeust__________________________" );
+  console.log("__________________________REST Complete________________________" );
   }
   catch(err) {
       reportName[restOutput] = "LogIn to SF1 on Phone";
@@ -125,6 +132,7 @@ Pebble.addEventListener("appmessage",
     if (iDB >= 0 && iDB < 3) {            //Make sure it is one of the dashboards we want to see
         // Define the REST command to send to Salesforce1
         url = "query?q=SELECT+Id,Description+FROM+Report+WHERE+DeveloperName='Pebble_Watch_Summary_"+vDB+"'";
+        console.log(">>>>>>>>>>>>>>>>>>>>>>Find the Report Name<<<<<<<<<<<<<<<<<<<<<<")
         restRequest(url, "ReportName", iDB);
         // Now send the results back to the Pebble
         var dict = { KEY_MSG_TYPE : iDB, KEY_MSG_NAME : reportName[iDB], KEY_MSG_VALUE : reportValue[iDB]};

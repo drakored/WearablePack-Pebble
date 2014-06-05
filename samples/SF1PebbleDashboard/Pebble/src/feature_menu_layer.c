@@ -12,12 +12,6 @@ static Window *window;
 TextLayer *text_layer;
 static MenuLayer *menu_layer;
 
-// Menu items can optionally have an icon drawn with them
-//static GBitmap *menu _icons[NUM_MENU_ICONS];
-
-// You can draw arbitrary things in a menu item such as a background
-//static GBitmap *menu _background;
-
 // Create the array for storing the current Report details and counters
 static int current_report = 0;          //Identifies which is the current report
 static int load_report = NUM_REPORTS;   //Used to loop when all reports need to be loaded
@@ -31,13 +25,15 @@ enum {
 };
 
 // * ************************************************************************************** refresh_dashborad
-void refresh_dashboard(const char *vboard){
-  //This is the packaging up of the data to send to the javascript code on the iPhone
+void refresh_dashboard(const int iReport){
+  //This is the packaging up of the data to send which dashboard the javascript code needs to refresh
+  static char sprc[] = "9";
+  snprintf(sprc, sizeof(sprc), "%d", iReport);  
   APP_LOG(APP_LOG_LEVEL_DEBUG, "SF1 PB: refresh_dashboard start");
 	DictionaryIterator *iter;
 	app_message_outbox_begin(&iter);
 	dict_write_uint8(iter, 0, 0x1);
-	dict_write_cstring(iter, KEY_DASHBOARD, vboard);  
+	dict_write_cstring(iter, KEY_DASHBOARD, sprc);  
 	dict_write_end(iter);
   app_message_outbox_send();
 }
@@ -74,6 +70,7 @@ void process_tuple(Tuple *t)
       break;
     default: APP_LOG(APP_LOG_LEVEL_DEBUG, "SF1 PB: Unknown key for Tuple");
   }
+        layer_mark_dirty(menu_layer_get_layer(menu_layer)); 
 }
 //This code is called whenever a new inbound message is recieved from the phone
 static void in_received_handler(DictionaryIterator *iter, void *context) 
@@ -101,11 +98,9 @@ static void in_received_handler(DictionaryIterator *iter, void *context)
   } else {
     //This is used to manage loading multiple rows if the user is already logged on
       APP_LOG(APP_LOG_LEVEL_DEBUG, "SF1 PB: Load Another Row");
-      static char sprc[] = "9";
-      snprintf(sprc, sizeof(sprc), "%d", load_report);
-      APP_LOG(APP_LOG_LEVEL_DEBUG, sprc);   
+      refresh_dashboard(load_report);    
       load_report = load_report + 1;
-      refresh_dashboard(sprc);
+      layer_mark_dirty(menu_layer_get_layer(menu_layer)); 
   }
 }
 
@@ -141,7 +136,6 @@ static void menu_draw_header_callback(GContext* ctx, const Layer *cell_layer, ui
 // Since all our lines are coming from an array, we don't need a case statement like most sample codes use.
 static void menu_draw_row_callback(GContext* ctx, const Layer *cell_layer, MenuIndex *cell_index, void *data) {
   menu_cell_basic_draw(ctx, cell_layer, sf_report_value[cell_index->row], sf_report_name[cell_index->row], NULL);   
-//  layer_mark_dirty(menu_layer_get_layer(menu_layer));  
 }
 // * ************************************************************************************** send_int
 void send_int(uint8_t key, uint8_t cmd)
@@ -158,33 +152,9 @@ void send_int(uint8_t key, uint8_t cmd)
 // Here we capture when a user selects a menu item
 void menu_select_callback(MenuLayer *menu_layer, MenuIndex *cell_index, void *data) {
   // Use the row to specify which item will receive the select action
-  //Send a quick pulse to acknowledge the button click
+  // Send a quick pulse to acknowledge the button click
   vibes_short_pulse();
-  int aInt = 6;
-  int sprc;
-  
- // int i;
- // static char buf[] = "9";
-
- // snprintf(buf, sizeof(buf), "%d", aInt);
- //   text_layer_set_text(&countLayer, buf);
-  
- // static char vDashboardID = "123";
- // sprintf(vDashboardID, 2, "%d", aInt);  
-  
-  switch (cell_index->row) {
-    case 0:
-      refresh_dashboard("0"); 
-      break;
-    case 1:
-      refresh_dashboard("1");  
-      break;
-    case 2:
-      refresh_dashboard("2");  
-      break;
-  }
-
-  layer_mark_dirty(menu_layer_get_layer(menu_layer));
+  refresh_dashboard(cell_index->row);
 }
 // * ************************************************************************************** menu_select_callback
 // * ************************************************************************************** window_load
@@ -222,14 +192,6 @@ void window_load(Window *window) {
 void window_unload(Window *window) {
   // Destroy the menu layer
   menu_layer_destroy(menu_layer);
-
-  // Cleanup the menu icons
-  //for (int i = 0; i < NUM_MENU_ICONS; i++) {
-  //  gbitmap_destroy(menu _icons[i]);
-  //}
-
-  // And cleanup the background
-  //gbitmap_destroy(menu _background);
 }
 // * ************************************************************************************** window_unload
 // * ************************************************************************************** MAIN
@@ -252,7 +214,6 @@ int main(void) {
   sf_report_name[1] =  "displaying info                        ";
   sf_report_value[2] = "on your Pebble                         ";
   sf_report_name[2] =  "wrist watch                            ";
-  
     
   //Register AppMessage events
 	app_message_register_inbox_received(in_received_handler);					 
