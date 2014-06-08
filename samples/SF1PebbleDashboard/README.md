@@ -222,7 +222,7 @@ github.com/developerforce/WearablePack-Pebble/tree/master/samples/SF1PebbleDashb
 
 8. Select "RUN BUILD".
 
-9. It is suggested that you toggle the "DEVELOPER" setting in the Pebble smartwatch application OFF then ON again to make sure it hasn't timed out. Make sure it is ON.
+9. It is suggested that you toggle the "DEVELOPER" setting in the Pebble smartwatch application OFF then ON again to make sure it hasn't timed out. Make sure it is ON. <br>
 ![image alt text](images/image04.png)
 10. Select "INSTALL AND RUN" to download the *Salesforce1 Pebble Dashboard* to your Pebble watch. It may take one or two minutes but if it takes any longer, it likely did not establish a suitable connection.  If this happens, try refreshing the browser page and making sure you are on the same WiFi network.
 
