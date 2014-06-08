@@ -1,4 +1,4 @@
-#Salesforce1 Pebble Dashboard Sample App
+Salesforce1 Pebble Dashboard Sample App
 ====================
 
 **_Contents_**
@@ -22,7 +22,7 @@
 
 
 
-# 1 - Quick Start
+1 - Quick Start
 --------
 Salesforce1 Pebble Dashboard sample application requires the installation of the GitHub package on your phone and the creation of three Salesforce Reports in your Salesforce Org/Instance. This document will outline the prerequisites and required steps. These instructions and the testing have been done with an iPhone5.
 
