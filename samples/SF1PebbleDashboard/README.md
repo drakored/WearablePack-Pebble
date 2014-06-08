@@ -3,9 +3,9 @@ Salesforce1 Pebble Dashboard Sample App
 
 **_Contents_**
 
-[1 - Quick Star](#heading=h.of47jvudgjfd)
+[1 - Quick Star](#link1)
 
-[2 - Overview](#heading=h.gj1pp8mvciah)
+[2 - Overview](#link2)
 
 [3 - Getting Started](#heading=h.2iejpddc13st)
 
@@ -22,8 +22,8 @@ Salesforce1 Pebble Dashboard Sample App
 
 
 
-1 - Quick Start
---------
+# 1 - Quick Start
+<a name="link1"></a>
 Salesforce1 Pebble Dashboard sample application requires the installation of the GitHub package on your phone and the creation of three Salesforce Reports in your Salesforce Org/Instance. This document will outline the prerequisites and required steps. These instructions and the testing have been done with an iPhone5.
 
 This sample application is part of the[ Salesforce Wear Developer Pack](http://developer.salesforce.com/wear), a collection of open-source starter apps that let you quickly design and build wearable apps that connect to the Salesforce1 Platform.
@@ -114,7 +114,7 @@ The following "Getting Started" and “Setup” provide more details on how to i
 
 
 # 2 - Overview
---------
+<a name="link2"></a>
 
 This sample application is designed to illustrate how to connect your smartwatch to Salesforce1 using the REST API call and the OAuth standard.  The application will display the totals from three reports configured in Salesforce on the Pebble watch in a dashboard format.
 
@@ -157,7 +157,7 @@ You will use the standard Salesforce UI using a web browser to update the report
 The *Salesforce1 Pebble Dashboard* is now displaying the data.  Whenever you navigate away from the app, the data will ‘unload.’  It will refresh all the data whenever you return to the dashboards without the need to login again.  If you want to force a specific report entry to reload, you can select and click on it by using the middle button on the watch.  Timers can be used for regular interval refreshes.
 
 # 3 - Getting Started
---------
+
 ## Get a Pebble Watch
 
 Learn more: [https://developer.getpebble.com/](https://developer.getpebble.com/)
@@ -233,7 +233,7 @@ github.com/developerforce/WearablePack-Pebble/tree/master/samples/SF1PebbleDashb
 The *Salesforce1 Pebble Dashboard* app is now installed.
 
 # 4 - Setup 
---------
+
 When the *Salesforce1 Pebble Dashboard* app starts, it will display the welcome screen indicating it has started.  However, it will not have connected to the Salesforce1 Platform until you use the Pebble App on your smartphone to provide your Salesforce user name and password.
 
 ![image alt text](images/image05.png)
