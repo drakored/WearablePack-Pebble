@@ -223,9 +223,7 @@ github.com/developerforce/WearablePack-Pebble/tree/master/samples/SF1PebbleDashb
 8. Select "RUN BUILD".
 
 9. It is suggested that you toggle the "DEVELOPER" setting in the Pebble smartwatch application OFF then ON again to make sure it hasn't timed out. Make sure it is ON.
-
 ![image alt text](images/image04.png)
-
 10. Select "INSTALL AND RUN" to download the *Salesforce1 Pebble Dashboard* to your Pebble watch. It may take one or two minutes but if it takes any longer, it likely did not establish a suitable connection.  If this happens, try refreshing the browser page and making sure you are on the same WiFi network.
 
 The *Salesforce1 Pebble Dashboard* app is now installed.
@@ -264,9 +262,7 @@ Salesforce provides the security for all the data and reports so before Pebble c
 2. Click on the watch icon that is now on the screen with the name you installed. eg. "Salesforce1"
 
 3. Click on "SETTINGS".
-
 ![image alt text](images/image06.png)
-
 4. Enter your Salesforce credentials (user name and password).
 
 5. You may be told that you need to provide a verification code that will be emailed or sent via SMS within a few minutes. You need to provide that 5 digit code here.
@@ -286,9 +282,7 @@ You can read more about Salesforce OAuth process from this site:
 You will not need to change this code to get it to work, since the client ID is a public value that can be used for all Pebble Watch applications.
 
 1. Salesforce will prompt you for your user name and password.
-
 ![image alt text](images/image07.png)
-
 2. Click the "Log in to Salesforce" button on the bottom of the screen.
 
 3. To save time, it is suggested that you check the "Remember User Name".  The password will not be saved, just the user name.
