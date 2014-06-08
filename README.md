@@ -10,29 +10,15 @@ Overview
 your Pebble Watch to your Salesforce instance (Org).  The application will
 connect using OAuth and use the Salesforce Analytics APIs to pull the totals
 from three reports and display the information as a dashboard on the watch
-screen.  The application will enable easy access to critical business data in an
-unobtrusive way.  With the real-time nature of the data collected in Salesforce,
-the *Salesforce1 Pebble Dashboard* will now make it easy to keep an eye on those
-critical metrics.
+screen.  The application will enable easy access to critical business data in an unobtrusive way.  With the real-time nature of the data collected in Salesforce, the *Salesforce1 Pebble Dashboard* will now make it easy to keep an eye on those critical metrics.
 
 
 
-The *Salesforce1 Pebble Dashboard* will display key summary metrics from up to
-three Salesforce Reports on the Pebble watch. The app is written in JavaScript
-using the PebbleKit JavaScript Framework and uses the Salesforce1's Analytics
-API to query report data from Salesforce and display it on the watch.
-
-
-
-The *Pebble Dashboard app* will display the information that is important to you
-in a similar format to the following image.
+The *Pebble Dashboard app* will display the information that is important to you in a similar format to the following image.
 
 ![](<Salesforce1PebbleDashboard.png>)
 
-Every time you access the *Pebble Dashboard app* or click on one of the report
-line items, the application will use the Analytics API to make a REST call to
-request the udpated numbers from Salesforce and display the totals from the
-Salesforce Report.
+Every time you access the *Pebble Dashboard app* or click on one of the report line items, the application will use the Analytics API to make a REST call to request the udpated numbers from Salesforce and display the totals from the Salesforce Report.
 
 
 
