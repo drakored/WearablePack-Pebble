@@ -3,19 +3,19 @@ Salesforce1 Pebble Dashboard Sample App
 
 **_Contents_**
 
-[1 - Quick Star](#link1)
+[1 - Quick Start](#link1)
 
 [2 - Overview](#link2)
 
-[3 - Getting Started](#heading=h.2iejpddc13st)
+[3 - Getting Started](#link3)
 
-[4 - Setup](#heading=h.dblyn67uwwdt)
+[4 - Setup](#link4)
 
-[5 - Usage](#heading=h.tv91w78azlqy)
+[5 - Usage](#link5)
 
-[6 - Next Steps](#heading=h.t5qpsmbd6dnk)
+[6 - Next Steps](#link6)
 
-[7 - Conclusion and Personal Notes](#heading=h.mgorhtegy7t0)
+[7 - Conclusion and Personal Notes](#link7)
 
 [Appendix - Troubleshooting](#linkA)
 
@@ -155,6 +155,7 @@ You will use the standard Salesforce UI using a web browser to update the report
 
 The *Salesforce1 Pebble Dashboard* is now displaying the data.  Whenever you navigate away from the app, the data will ‘unload.’  It will refresh all the data whenever you return to the dashboards without the need to login again.  If you want to force a specific report entry to reload, you can select and click on it by using the middle button on the watch.  Timers can be used for regular interval refreshes.
 
+<a name="link3"></a>
 # 3 - Getting Started
 
 ## Get a Pebble Watch
@@ -231,6 +232,7 @@ github.com/developerforce/WearablePack-Pebble/tree/master/samples/SF1PebbleDashb
 
 The *Salesforce1 Pebble Dashboard* app is now installed.
 
+<a name="link4"></a>
 # 4 - Setup 
 
 When the *Salesforce1 Pebble Dashboard* app starts, it will display the welcome screen indicating it has started.  However, it will not have connected to the Salesforce1 Platform until you use the Pebble App on your smartphone to provide your Salesforce user name and password.
@@ -356,6 +358,7 @@ Here is an example of an Opportunity report that uses a formula to sum all the R
 
   ![image alt text](images/image11.png)
 
+<a name="link5"></a>
 # 5 - Usage
 
 You can move through the three report screens using the normal [up] and [down] navigation buttons on the Pebble.  Additionally, to refresh the total on the screen, click the [middle] button.  This can also be done on a timer to automatically refresh every few minutes but will consume more battery and Salesforce API calls.
@@ -368,6 +371,7 @@ This will be of particular interest if you were showing the top three Open Cases
 
 To illustrate the OAuth process, you can go back to the smartphone Pebble App and select "SETTINGS" which will provide you the OAuth page with the existing user already authenticated, select “Deny” to revoke the authentication token, then go back to the *Salesforce1 Pebble Dashboard* and refresh one of the reports.
 
+<a name="link6"></a>
 # 6 - Next Steps
 
 Within the code, you will see a few lines with examples of how to make the results of queries display in your Pebble App:
@@ -380,6 +384,7 @@ The best way to determine what REST call you want to make is by utilizing the Sa
 
 and use the SOQL Query and REST Explorer to test your API calls before trying to insert them into the JS.
 
+<a name="link7"></a>
 # 7 - Conclusion and Personal Notes
 
 This was my first Pebble application and I learned a lot about the possibilities that make me want to expand my wearable solutions.  I enjoyed developing on the Pebble watch and think it has a very attractive price point compared with other smartwatches.  As a side note, this is the first watch I have worn in over twenty years, so I wasn’t sure whether I would continue to use it.  However, I have now become dependant on the form-factor because it provides essential information immediately.  I was always putting my phone down and missing key information.  Additionally, it has saved my iPhone’s battery so I can make it through the day without recharging.
