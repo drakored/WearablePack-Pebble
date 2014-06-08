@@ -109,7 +109,7 @@ This sample application is part of the[ Salesforce Wear Developer Pack](http://d
 
 * Click on the top row to see the dashboard information.
 
-The following "Getting Started" and “Setup” provide more details on how to install the application. 
+If you want additional detail the [Getting Started](#link3) and [Setup](#link4) sections provide more details on how to install the application. 
 
 
 <a name="link2"></a>
@@ -173,9 +173,7 @@ Currently, the *Salesforce1 Pebble Dashboard* code has only been tested with the
 2. Install the App on to your smartphone.
 
 3. Enable Developer Mode, in iOS you open the iPhone's Settings and find the Pebble app. Then toggle on "Developer Mode".
-
 ![image alt text](images/image03.png)
-
 4. From the Pebble Smartwatch app, go to the menu list and select "DEVELOPER" and toggle it on. It will time-out regularly so you will need to turn it off then on again to reset it.
 
 This sample code tries to follow similar layout and conventions as also found in other templates that are available on the CloudPebble website.  You are encouraged to review the template code available at:
@@ -192,7 +190,7 @@ The Cloud Pebble site provides a cloud based development platform to write custo
 
 2. It is recommended you try the 'Hello World' guide to make sure that everything is working properly.
 
-    1. [https://developer.getpebble.com/2/guides/](https://developer.getpebble.com/2/guides/)
+   [https://developer.getpebble.com/2/guides/](https://developer.getpebble.com/2/guides/)
 
 3. You will normally need your smartphone and computer on the same network to download new Pebble applications.  Additionally, some networks have advanced security that will prevent the peer to peer connection.
 
@@ -315,8 +313,9 @@ Without this Callback URL, there is no way for your JS code to receive the Acces
 
 Now you can go to the Pebble watch and click on one of the three lines.  You will see the response:
 
-		Unknown
-		Report Missing
+> **Unknown**
+
+> Report Missing
 
 Indicating you have successfully connected to the Salesforce Org/Instance but there was no report identified for presentation on the Pebble Watch.
 
@@ -376,11 +375,11 @@ To illustrate the OAuth process, you can go back to the smartphone Pebble App an
 
 Within the code, you will see a few lines with examples of how to make the results of queries display in your Pebble App:
 
-	`query?q=SELECT+Name+FROM+User`
+	query?q=SELECT+Name+FROM+User
 
 The best way to determine what REST call you want to make is by utilizing the Salesforce Workbench
 
-	[https://developer.salesforce.com/page/Workbench](https://developer.salesforce.com/page/Workbench)
+[https://developer.salesforce.com/page/Workbench](https://developer.salesforce.com/page/Workbench)
 
 and use the SOQL Query and REST Explorer to test your API calls before trying to insert them into the JS.
 
