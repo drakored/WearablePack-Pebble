@@ -24,7 +24,8 @@ Salesforce1 Pebble Dashboard Sample App
 <a name="link1"></a>
 # 1 - Quick Start
 
-Salesforce1 Pebble Dashboard sample application requires the installation of the GitHub package on your phone and the creation of three Salesforce Reports in your Salesforce Org/Instance. This document will outline the prerequisites and required steps. These instructions and the testing have been done with an iPhone5.
+Salesforce1 Pebble Dashboard sample application requires the installation of the GitHub package on your phone and the creation of three Salesforce Reports in your Salesforce Org/Instance. This document will outline the prerequisites and required steps. These instructions and the testing have been done with an iPhone5.<br>
+![image alt text](images/image08.png)
 
 This sample application is part of the[ Salesforce Wear Developer Pack](http://developer.salesforce.com/wear), a collection of open-source starter apps that let you quickly design and build wearable apps that connect to the Salesforce1 Platform.
 
@@ -271,7 +272,7 @@ Salesforce provides the security for all the data and reports so before Pebble c
 
 Note that when you click on **SETTINGS** it will initiate the Pebble code:
 
-**`Pebble.addEventListener("showConfiguration",..**.`
+		Pebble.addEventListener("showConfiguration",…
 
 that will invoke the "login.salesforce.com" page with the appropriate OAuth settings.
 
