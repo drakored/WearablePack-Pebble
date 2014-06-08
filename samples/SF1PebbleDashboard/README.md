@@ -115,7 +115,7 @@ If you want additional detail the [Getting Started](#link3) and [Setup](#link4) 
 <a name="link2"></a>
 # 2 - Overview
 
-This sample application is designed to illustrate how to connect your smartwatch to Salesforce1 using the REST API call and the OAuth standard.  The application will display the totals from three reports configured in Salesforce on the Pebble watch in a dashboard format.
+This sample application is designed to illustrate how to connect your smartwatch to Salesforce1 using the REST API call and the OAuth standard.  The application will display the totals from three reports configured in Salesforce on the Pebble watch in a dashboard format.<br>
 
 ![image alt text](images/image00.png)
 
@@ -123,7 +123,7 @@ The application shows the various ways a manager can access important informatio
 
 The code can easily be used to run any custom query to retrieve any data you want to gather from any object in Salesforce and display multiple lines.  It is also possible to extend the code to create new records directly from the watch.
 
-There are several components involved in the flow of information and authentication in this application.
+There are several components involved in the flow of information and authentication in this application.<br>
 
 ![image alt text](images/image01.png)
 
@@ -161,7 +161,7 @@ The *Salesforce1 Pebble Dashboard* is now displaying the data.  Whenever you nav
 ## Get a Pebble Watch
 
 Learn more: [https://developer.getpebble.com/](https://developer.getpebble.com/)
-
+<br>
 ![image alt text](images/image02.png)
 
 ## Install the Pebble App from the appropriate App Store
@@ -231,7 +231,7 @@ The *Salesforce1 Pebble Dashboard* app is now installed.
 <a name="link4"></a>
 # 4 - Setup 
 
-When the *Salesforce1 Pebble Dashboard* app starts, it will display the welcome screen indicating it has started.  However, it will not have connected to the Salesforce1 Platform until you use the Pebble App on your smartphone to provide your Salesforce user name and password.
+When the *Salesforce1 Pebble Dashboard* app starts, it will display the welcome screen indicating it has started.  However, it will not have connected to the Salesforce1 Platform until you use the Pebble App on your smartphone to provide your Salesforce user name and password.<br>
 
 ![image alt text](images/image05.png)
 
@@ -261,7 +261,7 @@ Salesforce provides the security for all the data and reports so before Pebble c
 
 2. Click on the watch icon that is now on the screen with the name you installed. eg. "Salesforce1"
 
-3. Click on "SETTINGS".
+3. Click on "SETTINGS".<br>
 ![image alt text](images/image06.png)
 4. Enter your Salesforce credentials (user name and password).
 
@@ -281,7 +281,7 @@ You can read more about Salesforce OAuth process from this site:
 
 You will not need to change this code to get it to work, since the client ID is a public value that can be used for all Pebble Watch applications.
 
-1. Salesforce will prompt you for your user name and password.
+1. Salesforce will prompt you for your user name and password.<br>
 ![image alt text](images/image07.png)
 2. Click the "Log in to Salesforce" button on the bottom of the screen.
 
@@ -291,8 +291,7 @@ If you are not familiar with OAuth, it is important to understand that the Pebbl
 
 Once you have authenticated with Salesforce, you will then be prompted to confirm that you want the JavaScript application to have access to invoke the API to get data from your Salesforce Org/Instance.
 
-If you click on the SETTINGS button in the Pebble App and you have an existing OAuth session established, you will only be prompted to confirm the *Salesforce1 Pebble Dashboard *is allowed to connected.  This will send a new Access Token to the JS.
-
+If you click on the SETTINGS button in the Pebble App and you have an existing OAuth session established, you will only be prompted to confirm the *Salesforce1 Pebble Dashboard *is allowed to connected.  This will send a new Access Token to the JS.<br>
 ![image alt text](images/image08.png)
 
 OAuth Details
@@ -323,7 +322,7 @@ This is the report defined as:
 
 **Pebble_Watch_Summary_0**
 
-that does a calculation to show the SLA for Cases closed.
+that does a calculation to show the SLA for Cases closed.<br>
 
 ![image alt text](images/image09.png)
 
@@ -343,11 +342,11 @@ You can learn how to create reports in Salesforce by reviewing the following web
 
 It is important to set the *Report Unique Name *to **Pebble_Watch_Summary_0** (_1 or _2).
 
-The *Report Description* will be used on the Pebble screen as the description so it should be short because the JavaScript will trim the Report Description to 30 characters.
+The *Report Description* will be used on the Pebble screen as the description so it should be short because the JavaScript will trim the Report Description to 30 characters.<br>
 
 ![image alt text](images/image10.png)
 
-Here is an example of an Opportunity report that uses a formula to sum all the Revenue and display the dollar amount ("Decimal Place" set to 0).
+Here is an example of an Opportunity report that uses a formula to sum all the Revenue and display the dollar amount ("Decimal Place" set to 0).<br>
 
   ![image alt text](images/image11.png)
 
@@ -423,7 +422,7 @@ http://forums.getpebble.com/categories/developer-discussion
 
 **2. Connection Failed**
 
-The JavaScript does not have a valid OAuth token.  Try logging in to Salesforce on your smartphone by clicking "SETTINGS" in the *Salesforce1 Pebble Dashboard* in the Pebble App.
+The JavaScript does not have a valid OAuth token.  Try logging in to Salesforce on your smartphone by clicking "SETTINGS" in the *Salesforce1 Pebble Dashboard* in the Pebble App.<br>
 
 ![image alt text](images/image12.png)
 
