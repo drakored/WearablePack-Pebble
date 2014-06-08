@@ -172,7 +172,7 @@ Currently, the *Salesforce1 Pebble Dashboard* code has only been tested with the
 
 2. Install the App on to your smartphone.
 
-3. Enable Developer Mode, in iOS you open the iPhone's Settings and find the Pebble app. Then toggle on "Developer Mode".
+3. Enable Developer Mode, in iOS you open the iPhone's Settings and find the Pebble app. Then toggle on "Developer Mode". <br>
 ![image alt text](images/image03.png)
 4. From the Pebble Smartwatch app, go to the menu list and select "DEVELOPER" and toggle it on. It will time-out regularly so you will need to turn it off then on again to reset it.
 
