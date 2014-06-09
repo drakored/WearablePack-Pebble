@@ -66,7 +66,7 @@ Getting Started
 Please refer to the [getting started guide][1] for details on how to run and
 test the app and about the underlying app architecture and code.
 
-[1]: <http://developer.salesforce.com/wear>
+[1]: <https://github.com/developerforce/WearablePack-Pebble/blob/master/samples/SF1PebbleDashboard/README.md>
 
 
 
