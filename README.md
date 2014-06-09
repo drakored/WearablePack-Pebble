@@ -1,4 +1,4 @@
-Wear Pack for Pebble
+Salesforce Wear Pack for Pebble
 ====================
 
 
