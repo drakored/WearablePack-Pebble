@@ -25,7 +25,7 @@ Salesforce1 Pebble Dashboard Sample App
 # 1 - Quick Start
 
 Salesforce1 Pebble Dashboard sample application requires the installation of the GitHub package on your phone and the creation of three Salesforce Reports in your Salesforce Org/Instance. This document will outline the prerequisites and required steps. These instructions and the testing have been done with an iPhone5.<br>
-![image alt text](images/image08.png)
+![image alt text](images/image12.png)
 
 This sample application is part of the[ Salesforce Wear Developer Pack](http://developer.salesforce.com/wear), a collection of open-source starter apps that let you quickly design and build wearable apps that connect to the Salesforce1 Platform.
 
@@ -118,7 +118,7 @@ If you want additional detail the [Getting Started](#link3) and [Setup](#link4) 
 
 This sample application is designed to illustrate how to connect your smartwatch to Salesforce1 using the REST API call and the OAuth standard.  The application will display the totals from three reports configured in Salesforce on the Pebble watch in a dashboard format.<br>
 
-![image alt text](images/image00.png)
+![image alt text](images/image08.png)
 
 The application shows the various ways a manager can access important information to manage daily activities like SLA attainment for the day, new pipeline created, or the available leads that still need to be converted.  Alternatively, this same sample code could be used by an individual user to track their own targets or information such as deals closed or remaining cases in queue.
 
